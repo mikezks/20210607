@@ -1,0 +1,13 @@
+/* .my-card {
+  background-color: red;
+  border: 2px dashed yellow;
+}
+ */
+
+.text-red {
+  color: red;
+}
+
+.select-link {
+  cursor: pointer;
+}
