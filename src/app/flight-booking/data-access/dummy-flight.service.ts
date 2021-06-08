@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { Flight } from '../entities/flight';
+import { Flight } from '../../entities/flight';
 import { FlightService } from './flight.service';
 
 @Injectable()
