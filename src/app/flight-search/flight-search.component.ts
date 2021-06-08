@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Flight } from '../entities/flight';
+import { DummyFlightService } from './dummy-flight.service';
 import { FlightService } from './flight.service';
 
 @Component({
   selector: 'app-flight-search',
   templateUrl: './flight-search.component.html',
-  styleUrls: ['./flight-search.component.css']
+  styleUrls: ['./flight-search.component.css'],
+  providers: [
+    // { provide: FlightService, useClass: DummyFlightService }
+  ]
 })
 export class FlightSearchComponent implements OnInit {
   from: string = 'Hamburg';
