@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-flight-edit',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flight-edit.component.css']
 })
 export class FlightEditComponent implements OnInit {
+  id: number;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.paramMap
+      .subscribe(
+        params => this.id = +params.get('id')
+      );
   }
-
 }

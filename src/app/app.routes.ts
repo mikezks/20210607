@@ -14,14 +14,6 @@ export const APP_ROUTES: Routes = [
     component: HomeComponent
   },
   {
-    path: 'flight-search',
-    component: FlightSearchComponent
-  },
-  {
-    path: 'flight-edit',
-    component: FlightEditComponent
-  },
-  {
     path: '**',
     redirectTo: 'home'
   }
