@@ -9,7 +9,7 @@
       <form #filter="ngForm">
           <div class="form-group">
               <label>From:</label>
-              <input name="from" [(ngModel)]="from" class="form-control" required minlength="3">
+              <input name="from" [(ngModel)]="from" class="form-control" required minlength="3" city>
           </div>
           <div class="alert alert-danger"
             *ngIf="filter?.controls?.from?.invalid">
@@ -22,6 +22,10 @@
           <div class="alert alert-danger"
             *ngIf="filter?.controls?.from?.hasError('minlength')">
             From control needs to have at least 3 chars.
+          </div>
+          <div class="alert alert-danger"
+            *ngIf="filter?.controls?.from?.hasError('city')">
+            From control contains a city name that is not allowed.
           </div>
 
           <div class="form-group">
