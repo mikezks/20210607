@@ -48,6 +48,10 @@
             To control needs to have at least 3 chars.
           </div>
           <div class="alert alert-danger"
+            *ngIf="filter?.controls?.to?.hasError('email')">
+            This is no valid email address.
+          </div>
+          <div class="alert alert-danger"
             *ngIf="filter?.controls?.to?.hasError('city')">
             To control contains a city name that is not allowed.<br>
             Those cities are allowed: {{ filter?.controls?.to?.errors.city.allowedCities.join(', ') }}
