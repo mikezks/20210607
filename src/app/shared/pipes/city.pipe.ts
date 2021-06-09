@@ -3,7 +3,8 @@ import {Observable, of} from "rxjs";
 import {delay, tap} from "rxjs/operators";
 
 @Pipe({
-  name: 'city'
+  name: 'city',
+  pure: true
 })
 export class CityPipe implements PipeTransform {
 
@@ -33,8 +34,8 @@ export class CityPipe implements PipeTransform {
     }
 
     return of(long).pipe(
-      /*delay(3000),
-      tap(console.log)*/
+      /* delay(3000),
+      tap(console.log) */
     );
   }
 

@@ -16,8 +16,16 @@ export class FlightSearchComponent implements OnInit {
   to: string = 'Graz';
   flights: Flight[] = [];
   selectedFlight: Flight;
+  basket: Record<number, boolean> = {
+    3: true,
+    5: true
+  };
 
-  constructor(private flightService: FlightService) { }
+  constructor(private flightService: FlightService) {
+    /* const myId = 5;
+    this.basket[myId] = false;
+    console.log(`Flugnummer ${myId} ausgewählt? ${this.basket[myId]}`); */
+  }
 
   ngOnInit(): void {
   }
