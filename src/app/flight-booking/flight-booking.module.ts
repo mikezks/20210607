@@ -5,13 +5,15 @@ import {SharedModule} from "../shared/shared.module";
 import { FlightCardComponent } from './ui/flight-card/flight-card.component';
 import { FlightEditComponent } from './container/flight-edit/flight-edit.component';
 import {FlightBookingRoutingModule} from "./flight-booking-routing.module";
+import { StatusToggleComponent } from './ui/status-toggle/status-toggle.component';
 
 
 @NgModule({
   declarations: [
     FlightSearchComponent,
     FlightCardComponent,
-    FlightEditComponent
+    FlightEditComponent,
+    StatusToggleComponent
   ],
   imports: [
     CommonModule,
